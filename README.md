@@ -43,7 +43,3 @@ src/stateMachine.js   choreography states
 src/curveController.js, fishSchool.js, fishGeometry.js, water.js, util.js
 scripts/setup.mjs     post-install asset fetch
 ```
-
-## Credits
-
-Shoal is a redesigned fork of **Hand Fish** by tubakhxn (original core: fish school, water simulation, gesture state machine). The original source files keep their `dev/creator=tubakhxn` headers. Shoal adds a new name, interface and UX flow. See `THIRD_PARTY_NOTICES.md`; check the original repository's license before redistributing.
