@@ -1,7 +1,5 @@
 # Third-party notices
 
-Shoal is derived from "Hand Fish" by tubakhxn.
-
 No third-party 3D models, textures, images or fonts are used. The fish geometry, shaders, bubbles and dust are
 procedurally generated in this repository's own code.
 
