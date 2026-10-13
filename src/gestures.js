@@ -1,4 +1,3 @@
-// dev/creator=tubakhxn
 import { clamp, ss } from './util.js';
 
 const FINGERS = [
