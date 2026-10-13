@@ -1,4 +1,4 @@
-// dev/creator=tubakhxn
+
 import { FilesetResolver, HandLandmarker } from '@mediapipe/tasks-vision';
 import { OneEuro } from './util.js';
 
