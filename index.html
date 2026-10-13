@@ -1,0 +1,68 @@
+<!doctype html>
+<!-- Shoal. Based on "Hand Fish" by tubakhxn -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#04141a" />
+  <title>Shoal · conduct a school of fish with your hand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <video id="cam" autoplay playsinline muted></video>
+  <canvas id="gl"></canvas>
+  <div id="vignette"></div>
+
+  <svg id="ring" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+    <circle cx="32" cy="32" r="26" class="ring-bg"/>
+    <circle id="ringArc" cx="32" cy="32" r="26" class="ring-arc" transform="rotate(-90 32 32)"/>
+  </svg>
+
+  <header id="brand">
+    <span class="mark" aria-hidden="true"></span>
+    <div><strong>Shoal</strong><small id="status" role="status"></small></div>
+  </header>
+
+  <nav id="tools" aria-label="Controls">
+    <label class="slider" title="Number of fish">
+      <span>Fish</span>
+      <input id="count" type="range" min="50" max="350" step="25" value="350" />
+      <output id="countOut">350</output>
+    </label>
+    <button id="btnWater" class="tool on" aria-pressed="true">Water</button>
+    <button id="btnFull" class="tool">Fullscreen</button>
+    <button id="btnHelp" class="tool">Guide</button>
+  </nav>
+
+  <ul id="gestures" aria-label="Detected gesture">
+    <li data-g="point"><svg viewBox="0 0 24 24"><path d="M12 3v11M9 14l3 3 3-3"/><circle cx="12" cy="20" r="1.4"/></svg>Point</li>
+    <li data-g="pinch"><svg viewBox="0 0 24 24"><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><path d="M11 12h2"/></svg>Pinch</li>
+    <li data-g="palm"><svg viewBox="0 0 24 24"><path d="M12 20V6M7 20l-2-9M17 20l2-9M9.5 20L8 4M14.5 20L16 4"/></svg>Open palm</li>
+  </ul>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <pre id="debug" hidden></pre>
+
+  <section id="intro" aria-labelledby="introTitle">
+    <div class="panel">
+      <h1 id="introTitle">Shoal</h1>
+      <p class="lede">Conduct a school of fish with one hand. Your webcam becomes the water; your fingertip, the current.</p>
+      <ol class="how">
+        <li><b>Point</b><span>Raise your index finger and move. The school builds and follows.</span></li>
+        <li><b>Pinch</b><span>Bring thumb and finger together to draw the school tight. Release to let it breathe.</span></li>
+        <li><b>Open palm</b><span>Hold your hand open until the fish dissolve into dust. Relax your hand to bring them back.</span></li>
+      </ol>
+      <div class="actions">
+        <button id="startCam" class="primary">Start with camera</button>
+        <button id="startMouse" class="ghost">Use mouse instead</button>
+      </div>
+      <p class="fine">Video is processed on your device and never uploaded. Mouse mode: hold click to pinch, hold Space for open palm.</p>
+    </div>
+  </section>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
