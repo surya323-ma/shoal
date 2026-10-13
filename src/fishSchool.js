@@ -1,4 +1,4 @@
-// dev/creator=tubakhxn
+
 import * as THREE from 'three';
 import { buildFishGeometry } from './fishGeometry.js';
 import { clamp, ss, damp, mulberry32 } from './util.js';
