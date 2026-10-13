@@ -1,4 +1,4 @@
-// dev/creator=tubakhxn
+
 import { damp, lerp, ss, clamp } from './util.js';
 import { Holder } from './gestures.js';
 
