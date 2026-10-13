@@ -1,4 +1,4 @@
-// Shoal. Based on "Hand Fish" by tubakhxn
+
 import * as THREE from 'three';
 import { HandSource, syntheticGesture } from './handTracking.js';
 import { GestureClassifier } from './gestures.js';
