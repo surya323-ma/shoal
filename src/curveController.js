@@ -1,4 +1,4 @@
-// dev/creator=tubakhxn
+
 import * as THREE from 'three';
 import { clamp, damp } from './util.js';
 
